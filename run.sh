@@ -23,7 +23,7 @@ services:
     container_name: custom-inference
     env_file: .env
     ports:
-      - "8001:8000"
+      - "8008:8007"
 
   custom-worker-$index:
     container_name: custom-worker-$index
@@ -105,7 +105,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 1,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -114,7 +114,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 3,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -123,7 +123,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 5,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "BTC"
             }
         },
@@ -132,7 +132,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 2,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "BTC"
             }
         },
@@ -141,7 +141,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 4,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "SOL"
             }
         },
@@ -150,7 +150,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 5,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "SOL"
             }
         },
@@ -159,7 +159,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 2,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "ETH"
             }
         },
@@ -168,7 +168,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 3,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "BNB"
             }
         },
@@ -177,7 +177,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 5,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "ARB"
             }
         },
@@ -186,7 +186,7 @@ cat <<EOF > config.json
             "inferenceEntrypointName": "api-worker-reputer",
             "loopSeconds": 5,
             "parameters": {
-                "InferenceEndpoint": "http://custom-inference:8000/inference/{Token}",
+                "InferenceEndpoint": "http://custom-inference:8007/inference/{Token}",
                 "Token": "MEME"
             }
         }
